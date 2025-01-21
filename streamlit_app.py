@@ -13,6 +13,6 @@ with st.expander('Data'):
    X
 
    st.write('**y**')
-   Y=df.drop('species')
+   Y=df.species
    Y
 
