@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 st.title('ABHINAVs machine learning app')
-st.info('its an amazing ml app created from technocrats project')
+st.info('My first ML project for_the TECHNOCRATS CLUB')
 
 with st.expander('Data'):
    st.write('**Raw data**')
