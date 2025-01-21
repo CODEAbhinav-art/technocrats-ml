@@ -29,7 +29,14 @@ with st.sidebar:
    body_mass_g=st.slider('Body Mass(gm)',2700.0,6300.0,4207.0)
    gender=st.selectbox('Gender',('Male','Female'))
    
-# ddcde
-#create a DAtaframe for the input features
+#create a Dataframe for the input features
+data={'island':island,
+   'bill_length_mm':bill_length_mm,
+   'bill_depth_mm':bill_depth_mm,
+   'flipper_length_mm':flipper_length_mm,
+   'body_mass_g':body_mass_g,
+   'gender':gender}
 
-
+input_df=pd.Dataframe(data,index=[0])
+input_penguins=pd.concat([input_df,X],axis=0)
+input_df
