@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title('machine learning app')
+st.title('ABHINAV's machine learning app')
 st.info('its an amazing ml app created from technocrats project')
 
 with st.expander('Data'):
