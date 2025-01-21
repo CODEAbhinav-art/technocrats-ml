@@ -39,10 +39,10 @@ data={'island':island,
 
 input_df=pd.DataFrame(data,index=[0])
 input_penguins=pd.concat([input_df,X],axis=0)
-input_df
+
 
 with st.expander('Input feautures'):
-   st.write('**Input Penguins')
+   st.write('**Input Penguins**')
    input_df
    st.write('**combined penguins data**')
    input_penguins
