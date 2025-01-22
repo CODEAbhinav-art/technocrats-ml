@@ -62,15 +62,13 @@ target_mapper={
 def target_encode(val):
    return target_mapper(val)
    
-y=y_raw.apply(target_encode)
-# y
-# y_raw
+# y=y_raw.apply(target_encode)
 
 #Data Preparations
 with st.expander('**Data Preparations**'):
    st.write('**Encoded X (input penguin)**')
    input_row
    st.write('**Encoded Y (input penguin)**')
-   y
+   y_raw
 
 
