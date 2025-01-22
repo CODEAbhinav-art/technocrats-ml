@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title('Machine Learning app by Abhinav😎')
+st.title('Machine Learning App by Abhinav😎')
 st.info('My first ML project for_the TECHNOCRATS CLUB')
 
 with st.expander('Data'):
@@ -19,7 +19,13 @@ with st.expander('Data'):
 with st.expander('Data Visualization'):
    st.scatter_chart(data=df,x='bill_length_mm',y='body_mass_g',color='species')
 
-#Data preparations
+with st.expander('Input feautures'):
+   st.write('**Input Penguins**')
+   input_df
+   st.write('**combined penguins data**')
+   input_penguins
+   
+#Input Features
 with st.sidebar:
    st.header('Input features')
    island=st.selectbox('Island',('Biscoe','Dream','Torgersen'))
@@ -40,6 +46,7 @@ data={'island':island,
 input_df=pd.DataFrame(data,index=[0])
 input_penguins=pd.concat([input_df,X_raw],axis=0)
 
+#Data Preparations
 #ENCODE X
 encode=['Island','gender']
 df_penguins=pd.get_dummies(input_penguins,prefix=encode)
@@ -53,14 +60,15 @@ target_mapper={
 }
 def target_encode(val):
    return target_mapper(val)
+y=y_raw.apply(target_encode)
+y
+y_raw
 
+with st.expander('**Data Preparations**'):
 
-with st.expander('Input feautures'):
-   st.write('**Input Penguins**')
-   input_df
-   st.write('**combined penguins data**')
-   input_penguins
-   st.write('**Encoded input penguin**')
+   st.write('**Encoded X (input penguin)**')
    input_row
+   st.write('**Encoded Y (input penguin)**')
+   y
 
 
