@@ -62,9 +62,9 @@ target_mapper={
 def target_encode(val):
    return target_mapper(val)
    
-y=y_raw.apply(target_encode)
-y
-y_raw
+# y=y_raw.apply(target_encode)
+# y
+# y_raw
 
 #Data Preparations
 with st.expander('**Data Preparations**'):
