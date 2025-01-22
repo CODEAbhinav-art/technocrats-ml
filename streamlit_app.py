@@ -60,7 +60,7 @@ target_mapper={
    'Gentoo':2
 }
 def target_encode(val):
-   return target_mapper(val)
+   return target_mapper[val]
    
 y=y_raw.apply(target_encode)
 
