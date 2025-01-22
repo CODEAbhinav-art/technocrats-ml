@@ -13,8 +13,8 @@ with st.expander('Data'):
    X_raw
 
    st.write('**y**')
-   Y_raw=df.species
-   Y_raw
+   y_raw=df.species
+   y_raw
 
 with st.expander('Data Visualization'):
    st.scatter_chart(data=df,x='bill_length_mm',y='body_mass_g',color='species')
