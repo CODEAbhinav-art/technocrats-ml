@@ -70,5 +70,6 @@ with st.expander('**Data Preparations**'):
    input_row
    st.write('**Encoded Y (input penguin)**')
    y
+   y_raw
 
 
