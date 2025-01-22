@@ -55,20 +55,20 @@ input_row=df_penguins[:1]
 
 #Encode y
 target_mapper={
-   'Adele':0,
+   'Adelie':0,
    'Chinstrap':1,
    'Gentoo':2
 }
 def target_encode(val):
    return target_mapper(val)
    
-# y=y_raw.apply(target_encode)
+y=y_raw.apply(target_encode)
 
 #Data Preparations
 with st.expander('**Data Preparations**'):
    st.write('**Encoded X (input penguin)**')
    input_row
    st.write('**Encoded Y (input penguin)**')
-   y_raw
+   y
 
 
