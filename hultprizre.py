@@ -49,14 +49,14 @@ data = {
     "Location": ["Vadodara", "Vadodara", "Vadodara"],
     "Rent (INR)": [6000, 12000, 5000],
     "Duration": ["1 Month", "3 Months", "6 Months"],
-    "Owner Contact": ["owner1@example.com", "owner2@example.com", "owner3@example.com"]
+    "Owner Contact": ["ramesh_rentals@gmail.com", "Kishan_houses@gmail.com", "satyam_pgs@gmail.com"]
 }
 df = pd.DataFrame(data)
 
 # Sidebar with custom styling header
 st.sidebar.markdown("<h2 style='color: #4CAF50;'>Search Filters</h2>", unsafe_allow_html=True)
 location_filter = st.sidebar.selectbox("Select Location", df["Location"].unique())
-max_rent = st.sidebar.slider("Max Rent (INR)", min_value=3000, max_value=20000, value=10000)
+max_rent = st.sidebar.slider("Max Rent (INR)", min_value=3000, max_value=10000, value=5000)
 
 # Filtered Results
 filtered_df = df[(df["Location"] == location_filter) & (df["Rent (INR)"] <= max_rent)]
