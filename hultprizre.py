@@ -46,7 +46,7 @@ st.image("https://via.placeholder.com/800x200.png?text=Student+Rental+Platform",
 # Sample data for listings
 data = {
     "Property Name": ["Student PG in Vadodara", "1BHK near MSU", "Shared Hostel Room"],
-    "Location": ["Vadodara", "Vadodara", "Vadodara"],
+    "Location": ["Vadodara", "ahmedabad", "mumbai"],
     "Rent (INR)": [6000, 12000, 5000],
     "Duration": ["1 Month", "3 Months", "6 Months"],
     "Owner Contact": ["ramesh_rentals@gmail.com", "Kishan_houses@gmail.com", "satyam_pgs@gmail.com"]
