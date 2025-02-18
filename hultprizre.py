@@ -81,69 +81,35 @@
 import streamlit as st
 import pandas as pd
 
-# Custom CSS for styling
+# Custom CSS for styling (Corrected)
+st.set_page_config(page_title="Avishkar Rentals") # Set title for browser tab
+
 st.markdown(
     """
     <style>
-    /* Background Image */
-    .stApp {
+    body { /* Target the body element */
         background-image: url('https://i.pinimg.com/560x/e0/75/62/e0756209594f8615c44ca0f55e5b600f.jpg'); /* Replace with your image URL */
         background-size: cover;
         background-repeat: no-repeat;
-        color: #333; /* Adjust text color as needed for contrast */
+        color: #333; 
     }
 
     /* Overlay for better text readability (optional) */
     .main .block-container {
-        background-color: rgba(255, 255, 255, 0.8); /* Adjust opacity as needed */
+        background-color: rgba(255, 255, 255, 0.8);
         padding: 20px;
         border-radius: 10px;
     }
 
-    /* Main header styling (Increased size and improved design) */
-    .main-header {
-        font-size: 4em;
-        font-weight: bold;
-        text-align: center;
-        color: #333; /* Darker color for better contrast */
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Added text shadow */
-        font-family: 'Arial Black', sans-serif; /* Example font - choose your favorite */
-    }
-
-    /* Responsive adjustments for smaller screens */
-    @media (max-width: 768px) { /* Adjust breakpoint as needed */
-        .main-header {
-            font-size: 3em; /* Slightly smaller on smaller screens */
-        }
-    }
-
-    /* Form Styling */
-    .stTextInput, .stSelectbox, .stTextArea {
-        background-color: rgba(255, 255, 255, 0.7); /* Transparent white background for inputs */
-        border-radius: 5px;
-        padding: 8px;
-        margin-bottom: 10px;  /* Space between form elements */
-    }
-
-    /* Table Styling */
-    .dataframe {
-        background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
-        border-radius: 8px;
-    }
-
-    /* Sidebar Styling */
-    .sidebar .sidebar-content {
-        background-color: rgba(250, 250, 250, 0.9); /* Slightly transparent white */
-        padding: 20px;
-        border-radius: 8px;
-    }
+    /* ... (Rest of your CSS styles: .main-header, form styles, table styles, sidebar styles) ... */
 
     </style>
     """,
     unsafe_allow_html=True,
 )
 
+
+# ... (Rest of your Streamlit code: Page Title, Image, Data, Sidebar, Forms, Reviews) ...
 # Page Title with a custom header
 st.markdown("<div class='main-header'>Avishkar Rentals</div>", unsafe_allow_html=True)  # Header changed here
 
