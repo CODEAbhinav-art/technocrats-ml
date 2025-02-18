@@ -192,3 +192,4 @@ rating = st.slider("Rate out of 5", 1, 5, 3)
 if st.button("Submit Review"):
     st.success("Review submitted successfully!")
 
+
