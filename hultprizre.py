@@ -86,7 +86,7 @@ st.markdown(
     <style>
     /* Background Image */
     .stApp {
-        background-image: url('https://www.pexels.com/photo/white-and-brown-concrete-building-1108090/'); /* Replace with your image URL */
+        background-image: url('https://www.pexels.com/photo/white-and-brown-concrete-building-1108090/');
         background-size: cover;
         background-repeat: no-repeat;
         color: #333; /* Adjust text color as needed for contrast */
@@ -144,12 +144,12 @@ st.markdown(
 )
 
 # Page Title with a custom header
-st.markdown("<div class='main-header'>Avishkar Rentals</div>", unsafe_allow_html=True)  # Header changed here
+st.markdown("<div class='main-header'>Avishkar Rentals</div>", unsafe_allow_html=True)
 
 # Display a banner image (replace the URL with your logo or image)
-st.image("https://via.placeholder.com/800x200.png?text=Avishkar+Rentals", use_container_width=True)  # Image text updated
+st.image("https://via.placeholder.com/800x200.png?text=Avishkar+Rentals", use_container_width=True)
 
-# Sample data for listings (Improved data)
+# Sample data for listings
 data = {
     "Property Name": ["Student PG in Vadodara", "1BHK near MSU", "Shared Hostel Room", "2BHK Apartment", "Studio Apartment"],
     "Location": ["Vadodara", "Vadodara", "Mumbai", "Ahmedabad", "Vadodara"],
