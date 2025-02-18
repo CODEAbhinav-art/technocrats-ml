@@ -38,7 +38,7 @@ st.markdown(
 )
 
 # Page Title with a custom header
-st.markdown("<div class='main-header'>Student Rental Platform</div>", unsafe_allow_html=True)
+st.markdown("<div class='main-header'>Avishkar Rentals</div>", unsafe_allow_html=True)
 
 # Display a banner image (replace the URL with your logo or image)
 st.image("https://via.placeholder.com/800x200.png?text=Student+Rental+Platform", use_column_width=True)
