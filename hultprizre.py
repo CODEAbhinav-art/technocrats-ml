@@ -78,9 +78,6 @@
 # if st.button("Submit Review"):
 #     st.success("Review submitted successfully!")
 
-# import streamlit as st
-# import pandas as pd
-
 import streamlit as st
 import pandas as pd
 
@@ -88,7 +85,34 @@ import pandas as pd
 st.markdown(
     """
     <style>
-    /* ... (Your CSS styles remain the same) ... */
+    /* ... (Other CSS styles) ... */
+
+    /* Main header styling (Increased size and improved design) */
+    .main-header {
+        font-size: 4em; /* Increased size */
+        font-weight: bold;
+        text-align: center;
+        color: #333; /* Darker color for better contrast */
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Added text shadow */
+        font-family: 'Arial Black', sans-serif; /* Example font - choose your favorite */
+    }
+
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+        .main-header {
+            font-size: 3em; /* Slightly smaller on smaller screens */
+        }
+    }
+
+        /* Form Styling */
+    .stTextInput, .stSelectbox, .stTextArea {
+        background-color: rgba(255, 255, 255, 0.7); /* Transparent white background for inputs */
+        border-radius: 5px;
+        padding: 8px;
+        margin-bottom: 10px;  /* Space between form elements */
+    }
+
     </style>
     """,
     unsafe_allow_html=True,
