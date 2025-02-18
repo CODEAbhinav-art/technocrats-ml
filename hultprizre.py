@@ -86,7 +86,7 @@ st.markdown(
     <style>
     /* Background Image */
     .stApp {
-        background-image: url('https://i.pinimg.com/560x/e0/75/62/e0756209594f8615c44ca0f55e5b600f.jpg'); /* Replace with your image URL */
+        background-image: url('https://www.pexels.com/photo/white-and-brown-concrete-building-1108090/'); /* Replace with your image URL */
         background-size: cover;
         background-repeat: no-repeat;
         color: #333; /* Adjust text color as needed for contrast */
@@ -191,3 +191,4 @@ review_text = st.text_area("Write your feedback", placeholder="Your thoughts..."
 rating = st.slider("Rate out of 5", 1, 5, 3)
 if st.button("Submit Review"):
     st.success("Review submitted successfully!")
+
