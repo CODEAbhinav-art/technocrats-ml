@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from pages import rentals, libraries, coaching_centers, chatbot, admin # Import admin page
+from pages import rentals, libraries, coaching_centers, chatbot, admin, auth # Import auth page module
 
 st.set_page_config(
     page_title="Avishkar Rentals",
@@ -9,23 +9,44 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# CSS (same as before) - included in full app.py for completeness below
+# CSS (same as before - include in full app.py below)
 
-# Main App Content
+# Initialize session state (for login status)
+if 'logged_in' not in st.session_state:
+    st.session_state['logged_in'] = False
+if 'user_role' not in st.session_state:
+    st.session_state['user_role'] = None
+if 'username' not in st.session_state:
+    st.session_state['username'] = None
+
+
+# Main App Content - Conditional on Login
 def main():
     st.markdown("<div class='main-header'>Avishkar Rentals</div>", unsafe_allow_html=True)
     st.image("https://via.placeholder.com/800x200.png?text=Your+Rental+Banner", use_container_width=True, class_name="banner-image")
 
-    # Sidebar for Navigation
+    if not st.session_state['logged_in']:
+        auth.show_auth_page() # Show login/signup if not logged in
+        return # Stop further execution if not logged in
+
+    # Sidebar for Navigation (only shown after login)
     with st.sidebar:
-        st.markdown("<h2 style='color: #007bff;'>Navigation</h2>", unsafe_allow_html=True) # Sidebar Header
+        st.markdown(f"<h3 style='color: #007bff;'>Welcome, {st.session_state['username']}</h3>", unsafe_allow_html=True) # Welcome message
+        auth.show_logout_page() # Logout button in sidebar
+        st.markdown("<hr>") # Separator
+        st.markdown("<h2 style='color: #007bff;'>Navigation</h2>", unsafe_allow_html=True)
         page = st.radio(
             "Choose a section",
-            ['Rental Listings', 'Libraries', 'Coaching Centers', 'Chatbot', 'Leave a Review', 'Admin Panel'], # Added Admin Panel
-            index=0 # Default to Rental Listings
+            ['Rental Listings', 'Libraries', 'Coaching Centers', 'Chatbot', 'Leave a Review'], # Public pages
+            index=0
         )
+        if st.session_state['user_role'] == 'admin': # Show Admin Panel only for admin
+            admin_page = st.radio("Admin Actions", ['Admin Panel']) # Admin options in a separate radio group - to keep main nav cleaner
+        else:
+            admin_page = None # No admin options for non-admins
 
-    # Page Routing
+
+    # Page Routing - Conditional on Page Selection
     if page == 'Rental Listings':
         rentals.show_page()
     elif page == 'Libraries':
@@ -36,16 +57,19 @@ def main():
         chatbot.show_page()
     elif page == 'Leave a Review':
         show_review_section()
-    elif page == 'Admin Panel': # Route to Admin Page
-        admin.show_page()
+    elif admin_page == 'Admin Panel': # Admin page route
+        if st.session_state['user_role'] == 'admin': # Double check role before showing admin page
+            admin.show_page()
+        else:
+            st.error("You are not authorized to access the Admin Panel.")
 
 
-def show_review_section():
+def show_review_section(): # Same as before
     st.markdown("<div class='section-header'>Leave a Review</div>", unsafe_allow_html=True)
     review_text = st.text_area("Your Feedback", placeholder="Share your thoughts about our service or a property...")
     rating = st.slider("Rating (1-5 stars)", 1, 5, 3)
     if st.button("Submit Review", key="review_button"):
-        # In a real app, you'd store this review in the database and associate with property (if applicable)
+        # In a real app, store review & associate with property if possible
         st.success("Thank you for your review!")
 
 
@@ -53,7 +77,7 @@ if __name__ == '__main__':
     main()
 
 
-# Full CSS (copy from previous enhanced version - included here for completeness)
+# Full CSS (same as before - included for completeness)
 st.markdown(
     """
     <style>
