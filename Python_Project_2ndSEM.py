@@ -69,7 +69,7 @@ st.markdown(
 st.markdown("<div class='main-header'>Rental house</div>", unsafe_allow_html=True)
 
 # Display a banner image (replace the URL with your logo or image)
-st.image("https://via.placeholder.com/800x200.png?text=Avishkar+Rentals", use_container_width=True)
+st.image("https://www.bing.com/images/search?view=detailV2&ccid=BrjQsl9c&id=09B5DBE6D3560E850D7C903F8159E7D04CE00D66&thid=OIP.BrjQsl9crKJYA7O_F_wjPwHaEU&mediaurl=https%3a%2f%2fcaboplatinum.com%2fwp-content%2fuploads%2f2020%2f04%2finternational-luxury-villa.jpg&exph=1119&expw=1920&q=rentals&simid=608038362199041216&FORM=IRPRST&ck=BFFAEA110A39CA9BD802B850C6F96643&selectedIndex=1&itb=0", use_container_width=True)
 
 # Sample data for listings
 data = {
