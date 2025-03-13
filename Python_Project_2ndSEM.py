@@ -8,7 +8,7 @@ st.markdown(
     <style>
     /* Background Image */
     .stApp {
-        background-image: url('https://www.pexels.com/photo/white-and-brown-concrete-building-1108090/');
+        background-image: url('https://images.pexels.com/photos/1108090/pexels-photo-1108090.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
         background-size: cover;
         background-repeat: no-repeat;
         color: #333; /* Adjust text color as needed for contrast */
