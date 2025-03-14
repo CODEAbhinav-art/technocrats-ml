@@ -3,68 +3,68 @@ import streamlit as st
 import pandas as pd
 
 # Custom CSS for styling
-st.markdown(
-    """
-    <style>
-    /* Background Image */
-    .stApp {
-        background-image: url('https://www.pexels.com/photo/white-and-brown-concrete-building-1108090/');
-        background-size: cover;
-        background-repeat: no-repeat;
-        color: #333; /* Adjust text color as needed for contrast */
-    }
+# st.markdown(
+#     """
+#     <style>
+#     /* Background Image */
+#     .stApp {
+#         background-image: url('https://www.pexels.com/photo/white-and-brown-concrete-building-1108090/');
+#         background-size: cover;
+#         background-repeat: no-repeat;
+#         color: #333; /* Adjust text color as needed for contrast */
+#     }
 
-    /* Overlay for better text readability (optional) */
-    .main .block-container {
-        background-color: rgba(255, 255, 255, 0.8); /* Adjust opacity as needed */
-        padding: 20px;
-        border-radius: 10px;
-    }
+#     /* Overlay for better text readability (optional) */
+#     .main .block-container {
+#         background-color: rgba(255, 255, 255, 0.8); /* Adjust opacity as needed */
+#         padding: 20px;
+#         border-radius: 10px;
+#     }
 
-    /* Main header styling (Increased size and improved design) */
-    .main-header {
-        font-size: 4em;
-        font-weight: bold;
-        text-align: center;
-        color: #333; /* Darker color for better contrast */
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Added text shadow */
-        font-family: 'Arial Black', sans-serif; /* Example font - choose your favorite */
-    }
+#     /* Main header styling (Increased size and improved design) */
+#     .main-header {
+#         font-size: 4em;
+#         font-weight: bold;
+#         text-align: center;
+#         color: #333; /* Darker color for better contrast */
+#         margin-bottom: 20px;
+#         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Added text shadow */
+#         font-family: 'Arial Black', sans-serif; /* Example font - choose your favorite */
+#     }
 
-    /* Responsive adjustments for smaller screens */
-    @media (max-width: 768px) { /* Adjust breakpoint as needed */
-        .main-header {
-            font-size: 3em; /* Slightly smaller on smaller screens */
-        }
-    }
+#     /* Responsive adjustments for smaller screens */
+#     @media (max-width: 768px) { /* Adjust breakpoint as needed */
+#         .main-header {
+#             font-size: 3em; /* Slightly smaller on smaller screens */
+#         }
+#     }
 
-    /* Form Styling */
-    .stTextInput, .stSelectbox, .stTextArea {
-        background-color: rgba(255, 255, 255, 0.7); /* Transparent white background for inputs */
-        border-radius: 5px;
-        padding: 8px;
-        margin-bottom: 10px;  /* Space between form elements */
-    }
+#     /* Form Styling */
+#     .stTextInput, .stSelectbox, .stTextArea {
+#         background-color: rgba(255, 255, 255, 0.7); /* Transparent white background for inputs */
+#         border-radius: 5px;
+#         padding: 8px;
+#         margin-bottom: 10px;  /* Space between form elements */
+#     }
 
-    /* Table Styling */
-    .dataframe {
-        background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
-        border-radius: 8px;
-    }
+#     /* Table Styling */
+#     .dataframe {
+#         background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
+#         border-radius: 8px;
+#     }
 
-    /* Sidebar Styling */
-    .sidebar .sidebar-content {
-        background-color: rgba(250, 250, 250, 0.9); /* Slightly transparent white */
-        padding: 20px;
-        border-radius: 8px;
-    }
+#     /* Sidebar Styling */
+#     .sidebar .sidebar-content {
+#         background-color: rgba(250, 250, 250, 0.9); /* Slightly transparent white */
+#         padding: 20px;
+#         border-radius: 8px;
+#     }
 
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
+#     </style>
+#     """,
+#     unsafe_allow_html=True,
+# )
+st.write("rentals")
 # Page Title with a custom header
 st.markdown("<div class='main-header'>Rental house</div>",unsafe_allow_html=True)
 
