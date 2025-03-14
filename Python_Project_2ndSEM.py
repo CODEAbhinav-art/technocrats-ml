@@ -3,9 +3,6 @@ import streamlit as st
 import pandas as pd
 
 # Custom CSS for styling
-st.markdown(
-    unsafe_allow_html=True,
-)
 
 # Page Title with a custom header
 st.markdown("<div class='main-header'>Rental house</div>",unsafe_allow_html=True)
