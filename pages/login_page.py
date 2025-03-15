@@ -1,3 +1,35 @@
+import streamlit as st
+import firebase_admin
+
+from firebase_admin import credentials
+from firebase_admin import auth
+
+
+
+def app():
+  st.title("welcome to renters")
+
+  choice=st.selectbox('login/signup',['login','signup'])
+  if choice=='login':
+    email=st.text_input('Email Address')
+    password=st.text_input('password',type='password')
+
+    st.button('login')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # import streamlit as st
 # from database import get_user_by_username, create_user
 # from werkzeug.security import check_password_hash
@@ -53,3 +85,5 @@
 
 # if __name__ == '__main__':
 #     show_auth_page() # For testing auth pages directly
+
+
