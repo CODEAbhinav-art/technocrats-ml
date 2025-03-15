@@ -1,5 +1,5 @@
 import pickle
-from pathlin import path
+from pathlib import path
 
 import streamlit as st
 import pandas as pd
