@@ -53,18 +53,3 @@
 
 # if __name__ == '__main__':
 #     show_auth_page() # For testing auth pages directly
-import pickle
-from pathlib import Path
-
-import streamlit_authenticator as Stauth
-
-names=['admin','user']
-usernames=['admin','user']
-passwords=["abc123","123abc"] 
-
-hashed_passwords=Stauth.Hasher(passwords).generate()
-
-file_path=Path(__file__).parent/"hashed_pw.pkl"
-with file_path.open("wb") as file:
-    pickle.dump(hashed_passwords,file)
-
